@@ -1,5 +1,6 @@
 package se.lexicon.g1.fitoriabackend.domain.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -40,5 +41,7 @@ public class Workout {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", nullable = false)
     @ToString.Exclude
+    @JsonIgnore //Prevents recursive serialization on response body
+
     private User user;
 }
