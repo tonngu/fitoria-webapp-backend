@@ -2,10 +2,7 @@ package se.lexicon.g1.fitoriabackend.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import se.lexicon.g1.fitoriabackend.domain.dto.UserDTO;
 import se.lexicon.g1.fitoriabackend.domain.dto.UserDTOView;
 import se.lexicon.g1.fitoriabackend.service.UserService;
