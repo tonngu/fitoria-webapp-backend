@@ -35,6 +35,9 @@ public class Workout {
     @Column
     private Integer duration;
 
+    @Column
+    private Integer distance;
+
     @Column(nullable = false)
     private LocalDate date;
 
