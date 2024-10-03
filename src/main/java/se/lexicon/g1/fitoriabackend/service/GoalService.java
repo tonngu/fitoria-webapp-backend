@@ -8,7 +8,9 @@ import se.lexicon.g1.fitoriabackend.repository.GoalRepository;
 import se.lexicon.g1.fitoriabackend.repository.UserRepository;
 
 import java.time.LocalDate;
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class GoalService {
@@ -22,7 +24,10 @@ public class GoalService {
     public List<Goal> getUpcomingGoals(Long userId) {
         LocalDate today = LocalDate.now();
         LocalDate twoWeeksFromNow = LocalDate.now().plusWeeks(2);
-        return goalRepository.findByUser_IdAndTargetDateBetween(userId, today, twoWeeksFromNow);
+        List<Goal> goals = goalRepository.findByUser_IdAndTargetDateBetween(userId, today, twoWeeksFromNow);
+        return goals.stream()
+                .sorted(Comparator.comparing(Goal::getTargetDate))
+                .collect(Collectors.toList());
     }
 
     public Goal saveGoal(Long userId, Goal goal){

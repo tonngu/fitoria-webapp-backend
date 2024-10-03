@@ -11,4 +11,5 @@ import java.util.List;
 public interface GoalRepository extends JpaRepository<Goal, Long> {
     List<Goal> findByUser_IdAndTargetDateBetween(Long userId, LocalDate today, LocalDate twoWeeksFromNow);
     List<Goal> findByUser_Id(Long userId);
+    List<Goal> findByUser_IdOrderByTargetDateAsc(Long userId);
 }
