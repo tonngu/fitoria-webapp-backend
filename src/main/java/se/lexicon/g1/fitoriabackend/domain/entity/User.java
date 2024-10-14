@@ -40,4 +40,9 @@ public class User {
     @JsonIgnore
     private List<Goal> goals = new ArrayList<>();
 
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    @ToString.Exclude
+    @JsonIgnore
+    private List<BodyInfo> bodyInfos = new ArrayList<>();
+
 }
