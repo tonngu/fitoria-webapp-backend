@@ -67,4 +67,9 @@ public class WorkoutService {
         LocalDate oneYearAgo = LocalDate.now().minusYears(1);
         return workoutRepository.findByUser_IdAndDateAfterAndExercise(userId, oneYearAgo, exercise);
     }
+
+    public List<Workout> getAllWorkoutsFromPastThreeWeeks(Long userId) {
+        LocalDate threeWeeksAgo = LocalDate.now().minusWeeks(3);
+        return workoutRepository.findByUser_IdAndDateAfter(userId, threeWeeksAgo);
+    }
 }

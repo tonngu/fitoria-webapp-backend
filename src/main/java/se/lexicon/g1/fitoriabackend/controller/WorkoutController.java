@@ -59,4 +59,11 @@ public class WorkoutController {
         List<Workout> workouts = workoutService.getWorkoutsFromPastYear(userId, exercise);
         return ResponseEntity.ok(workouts);
     }
+
+    // Get all workouts from the past 3 weeks for a specific user
+    @GetMapping("/user/{userId}/past-three-weeks")
+    public ResponseEntity<List<Workout>> getAllWorkoutsFromPastThreeWeeks(@PathVariable Long userId) {
+        List<Workout> workouts = workoutService.getAllWorkoutsFromPastThreeWeeks(userId);
+        return ResponseEntity.ok(workouts);
+    }
 }

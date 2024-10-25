@@ -12,4 +12,5 @@ public interface WorkoutRepository extends JpaRepository<Workout, Long> {
     List<Workout> findByUser_Id(Long id);
     List<Workout> findByUser_IdAndDateAfter(Long userId, LocalDate date);
     List<Workout> findByUser_IdAndDateAfterAndExercise(Long userId, LocalDate date, String exercise);
+
 }
