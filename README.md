@@ -56,7 +56,7 @@ export OPENAI_API_KEY=your_openai_api_key
 
 ---
 
-## API Documentation
+## 📄 API Documentation
 
 ### Access Swagger UI
 
@@ -87,7 +87,7 @@ http://localhost:8080/swagger-ui/index.html
 
 ---
 
-## Future Improvements
+## 🌟 Future Improvements
 - Add progress tracking and achievement badges.
 - Integration with fitness wearables for automatic data logging.
 - Implement a leaderboard to compare user progress.
