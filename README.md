@@ -68,22 +68,22 @@ http://localhost:8080/swagger-ui/index.html
 ### API Endpoints Overview
 
 #### User Management
-- POST /api/users/register - Register a new user
-- POST /api/users/login - User login
+- POST `/api/users/register` - Register a new user
+- POST `/api/users/login` - User login
 
 #### Workout Logging
-- POST /api/workouts/user/{userId} - Log a new workout
-- GET /api/workouts/user/{userId}/past-three-weeks - Get workouts from the past 3 weeks
-- GET /api/workouts/user/{userId}/past-two-months - Get workouts from the past 2 months
-- GET /api/workouts/user/{userId}/past-six-months - Get workouts from the past 6 months
-- GET /api/workouts/user/{userId}/past-year - Get workouts from the past year
+- POST `/api/workouts/user/{userId}` - Log a new workout
+- GET `/api/workouts/user/{userId}/past-three-weeks` - Get workouts from the past 3 weeks
+- GET `/api/workouts/user/{userId}/past-two-months` - Get workouts from the past 2 months
+- GET `/api/workouts/user/{userId}/past-six-months` - Get workouts from the past 6 months
+- GET `/api/workouts/user/{userId}/past-year` - Get workouts from the past year
 
 #### Body Info Logging
-- POST /api/body-info/user/{userId} - Log body information
-- GET /api/body-info/user/{userId}/past-three-weeks - Get body info from the past 3 weeks
-- GET /api/body-info/user/{userId}/past-two-months - Get body info from the past 2 months
-- GET /api/body-info/user/{userId}/past-six-months - Get body info from the past 6 months
-- GET /api/body-info/user/{userId}/past-year - Get body info from the past year
+- POST `/api/body-info/user/{userId}` - Log body information
+- GET `/api/body-info/user/{userId}/past-three-weeks` - Get body info from the past 3 weeks
+- GET `/api/body-info/user/{userId}/past-two-months` - Get body info from the past 2 months
+- GET `/api/body-info/user/{userId}/past-six-months` - Get body info from the past 6 months
+- GET `/api/body-info/user/{userId}/past-year` - Get body info from the past year
 
 ---
 
